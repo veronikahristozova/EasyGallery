@@ -99,10 +99,7 @@
 			children = (
 				96EF15391ED8480500FCE739 /* AppDelegate.swift */,
 				96EF153B1ED8480500FCE739 /* ViewController.swift */,
-				96EF153D1ED8480500FCE739 /* Main.storyboard */,
-				96EF15401ED8480500FCE739 /* Assets.xcassets */,
-				96EF15421ED8480500FCE739 /* LaunchScreen.storyboard */,
-				96EF15451ED8480500FCE739 /* Info.plist */,
+				96EF15671ED8483A00FCE739 /* Supporting Files */,
 			);
 			path = EasyGallery;
 			sourceTree = "<group>";
@@ -123,6 +120,17 @@
 				96EF155B1ED8480500FCE739 /* Info.plist */,
 			);
 			path = EasyGalleryUITests;
+			sourceTree = "<group>";
+		};
+		96EF15671ED8483A00FCE739 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96EF153D1ED8480500FCE739 /* Main.storyboard */,
+				96EF15401ED8480500FCE739 /* Assets.xcassets */,
+				96EF15421ED8480500FCE739 /* LaunchScreen.storyboard */,
+				96EF15451ED8480500FCE739 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
