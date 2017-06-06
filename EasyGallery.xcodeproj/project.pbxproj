@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		68FFECE3381D7B1482F6D8B2 /* Pods_EasyGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B3EA0969F2F85B8BA29B61 /* Pods_EasyGalleryTests.framework */; };
+		9691C6981EE69594008792E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C6971EE69594008792E1 /* Preferences.swift */; };
+		9691C69B1EE69B51008792E1 /* PaintingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */; };
+		9691C69D1EE69F68008792E1 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C69C1EE69F68008792E1 /* Painting.swift */; };
 		96EF153A1ED8480500FCE739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF15391ED8480500FCE739 /* AppDelegate.swift */; };
 		96EF153C1ED8480500FCE739 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF153B1ED8480500FCE739 /* LoginViewController.swift */; };
 		96EF153F1ED8480500FCE739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EF153D1ED8480500FCE739 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		25B3EA0969F2F85B8BA29B61 /* Pods_EasyGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7E50173586FA351572C523 /* Pods-EasyGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGallery/Pods-EasyGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		88F1846DC6235D49A85D0657 /* Pods-EasyGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGalleryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGalleryTests/Pods-EasyGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
+		9691C6971EE69594008792E1 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingsViewController.swift; sourceTree = "<group>"; };
+		9691C69C1EE69F68008792E1 /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		96EF15361ED8480500FCE739 /* EasyGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EF15391ED8480500FCE739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EF153B1ED8480500FCE739 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9691C6961EE694E6008792E1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96EF153B1ED8480500FCE739 /* LoginViewController.swift */,
+				96EF156A1ED98E5E00FCE739 /* RegisterViewController.swift */,
+				96EF156C1ED9909D00FCE739 /* ForgottenPasswordViewController.swift */,
+				9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9691C6991EE695E2008792E1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9691C6971EE69594008792E1 /* Preferences.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		9691C69E1EE69F72008792E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9691C69C1EE69F68008792E1 /* Painting.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		96EF152D1ED8480500FCE739 = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				96EF15391ED8480500FCE739 /* AppDelegate.swift */,
-				96EF153B1ED8480500FCE739 /* LoginViewController.swift */,
-				96EF156A1ED98E5E00FCE739 /* RegisterViewController.swift */,
-				96EF156C1ED9909D00FCE739 /* ForgottenPasswordViewController.swift */,
+				9691C6961EE694E6008792E1 /* View Controllers */,
+				9691C69E1EE69F72008792E1 /* Models */,
+				9691C6991EE695E2008792E1 /* Utilities */,
 				96EF15671ED8483A00FCE739 /* Supporting Files */,
 			);
 			path = EasyGallery;
@@ -469,6 +502,9 @@
 			files = (
 				96EF156B1ED98E5E00FCE739 /* RegisterViewController.swift in Sources */,
 				96EF153C1ED8480500FCE739 /* LoginViewController.swift in Sources */,
+				9691C69B1EE69B51008792E1 /* PaintingsViewController.swift in Sources */,
+				9691C69D1EE69F68008792E1 /* Painting.swift in Sources */,
+				9691C6981EE69594008792E1 /* Preferences.swift in Sources */,
 				96EF156D1ED9909D00FCE739 /* ForgottenPasswordViewController.swift in Sources */,
 				96EF153A1ED8480500FCE739 /* AppDelegate.swift in Sources */,
 			);

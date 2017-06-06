@@ -37,6 +37,8 @@ class LoginViewController: UIViewController {
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
+                    //TODO: Preferences 
+                    Preferences.teacher = true
                     self.performSegue(withIdentifier: "login", sender: nil)
                     
                 } else {
@@ -52,16 +54,13 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func didTapLoginAsAStudentButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "login", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

@@ -82,6 +82,16 @@
                                     <segue destination="fLe-Io-muW" kind="show" id="IZ1-uY-XbJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-Yk-rm0">
+                                <rect key="frame" x="131.5" y="474" width="112" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Login as a student">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLoginAsAStudentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6o-NF-RpM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -95,6 +105,8 @@
                             <constraint firstItem="XMJ-33-PiD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="V6g-g6-cLE"/>
                             <constraint firstItem="4bu-fM-IPu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="YxF-fG-erP"/>
                             <constraint firstItem="ON8-if-F8n" firstAttribute="centerX" secondItem="XMJ-33-PiD" secondAttribute="centerX" id="ccb-Mi-ooN"/>
+                            <constraint firstItem="jvo-Yk-rm0" firstAttribute="centerX" secondItem="dy9-ut-Sss" secondAttribute="centerX" id="iXx-Z1-W0F"/>
+                            <constraint firstItem="jvo-Yk-rm0" firstAttribute="top" secondItem="dy9-ut-Sss" secondAttribute="bottom" constant="8" id="kLW-mL-xAi"/>
                             <constraint firstItem="XMJ-33-PiD" firstAttribute="top" secondItem="4bu-fM-IPu" secondAttribute="bottom" constant="60" id="uRH-tH-SzF"/>
                         </constraints>
                     </view>
@@ -248,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="904.79999999999995" y="957.57121439280365"/>
         </scene>
-        <!--View Controller-->
+        <!--Paintings View Controller-->
         <scene sceneID="1wV-VM-Dg0">
             <objects>
-                <viewController id="MWL-YP-McN" sceneMemberID="viewController">
+                <viewController id="MWL-YP-McN" customClass="PaintingsViewController" customModule="EasyGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r0a-Im-jQj"/>
                         <viewControllerLayoutGuide type="bottom" id="abT-uZ-48q"/>
@@ -259,13 +271,48 @@
                     <view key="view" contentMode="scaleToFill" id="xFE-GB-OhI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lnM-EU-MAC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cLQ-nB-7Om">
+                                    <size key="itemSize" width="345" height="196"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="O3j-11-Jyf">
+                                        <rect key="frame" x="15" y="0.0" width="345" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="196"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="MWL-YP-McN" id="48D-fD-qJX"/>
+                                    <outlet property="delegate" destination="MWL-YP-McN" id="QgO-hH-MlY"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lnM-EU-MAC" firstAttribute="top" secondItem="r0a-Im-jQj" secondAttribute="bottom" id="GyE-jT-9ls"/>
+                            <constraint firstAttribute="trailing" secondItem="lnM-EU-MAC" secondAttribute="trailing" id="L3U-r5-Q7H"/>
+                            <constraint firstItem="lnM-EU-MAC" firstAttribute="leading" secondItem="xFE-GB-OhI" secondAttribute="leading" id="qBQ-rb-AeH"/>
+                            <constraint firstItem="abT-uZ-48q" firstAttribute="top" secondItem="lnM-EU-MAC" secondAttribute="bottom" id="qpi-fr-cDj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ATh-Zw-E2U"/>
+                    <connections>
+                        <outlet property="paintingsCollectionView" destination="lnM-EU-MAC" id="pBd-lM-7Kl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njE-IZ-XcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="101"/>
+            <point key="canvasLocation" x="1796" y="129.98500749625188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XQD-lk-F0o">
