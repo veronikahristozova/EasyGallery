@@ -12,11 +12,19 @@ import FirebaseDatabase
 class PaintingsViewController: UIViewController {
 
     @IBOutlet weak var paintingsCollectionView: UICollectionView!
+    @IBOutlet weak var addPaintingButton: UIBarButtonItem!
     
     let ref = Database.database().reference(withPath: "paintings")
     var paintings = [Painting]()
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if Preferences.teacher {
+            addPaintingButton.title = ""
+        } else {
+            addPaintingButton.title = "+"
+        }
         ref.observe(.value, with: { snapshot in
             for item in snapshot.children {
                 let painting = Painting(snapshot: item as! DataSnapshot)
@@ -32,8 +40,8 @@ extension PaintingsViewController: UICollectionViewDelegate, UICollectionViewDat
         return paintings.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = .orange
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PaintingCollectionViewCell
+        cell.painting = paintings[indexPath.row]
         return cell
     }
 }
