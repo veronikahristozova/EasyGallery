@@ -10,6 +10,7 @@
 		68FFECE3381D7B1482F6D8B2 /* Pods_EasyGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B3EA0969F2F85B8BA29B61 /* Pods_EasyGalleryTests.framework */; };
 		9618F2BE1EE7285400385B83 /* PaintingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618F2BD1EE7285400385B83 /* PaintingCollectionViewCell.swift */; };
 		9618F2C01EE7297E00385B83 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618F2BF1EE7297E00385B83 /* Extensions.swift */; };
+		9618F2C21EE7E7D000385B83 /* AddPaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9618F2C11EE7E7D000385B83 /* AddPaintingViewController.swift */; };
 		9691C6981EE69594008792E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C6971EE69594008792E1 /* Preferences.swift */; };
 		9691C69B1EE69B51008792E1 /* PaintingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */; };
 		9691C69D1EE69F68008792E1 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C69C1EE69F68008792E1 /* Painting.swift */; };
@@ -51,6 +52,7 @@
 		88F1846DC6235D49A85D0657 /* Pods-EasyGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGalleryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGalleryTests/Pods-EasyGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9618F2BD1EE7285400385B83 /* PaintingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingCollectionViewCell.swift; sourceTree = "<group>"; };
 		9618F2BF1EE7297E00385B83 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9618F2C11EE7E7D000385B83 /* AddPaintingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPaintingViewController.swift; sourceTree = "<group>"; };
 		9691C6971EE69594008792E1 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingsViewController.swift; sourceTree = "<group>"; };
 		9691C69C1EE69F68008792E1 /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				96EF156C1ED9909D00FCE739 /* ForgottenPasswordViewController.swift */,
 				9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */,
 				9618F2BD1EE7285400385B83 /* PaintingCollectionViewCell.swift */,
+				9618F2C11EE7E7D000385B83 /* AddPaintingViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				9691C69D1EE69F68008792E1 /* Painting.swift in Sources */,
 				9691C6981EE69594008792E1 /* Preferences.swift in Sources */,
 				96EF156D1ED9909D00FCE739 /* ForgottenPasswordViewController.swift in Sources */,
+				9618F2C21EE7E7D000385B83 /* AddPaintingViewController.swift in Sources */,
 				96EF153A1ED8480500FCE739 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

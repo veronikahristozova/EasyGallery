@@ -32,4 +32,13 @@ class Painting {
         year = snapshotValue["Year"] as! Int
         ref = snapshot.ref
     }
+    func toAnyObject() -> Any {
+        return [
+            "ID": 2,
+            "Name": name,
+            "Author": author,
+            "PictureURL": pictureURL,
+            "Year": year
+        ]
+    }
 }

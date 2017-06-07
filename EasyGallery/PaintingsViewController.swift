@@ -21,11 +21,13 @@ class PaintingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if Preferences.teacher {
-            addPaintingButton.title = ""
-        } else {
             addPaintingButton.title = "+"
+        } else {
+            addPaintingButton.title = ""
         }
         ref.observe(.value, with: { snapshot in
+            self.paintings.removeAll()
+            self.paintingsCollectionView.reloadData()
             for item in snapshot.children {
                 let painting = Painting(snapshot: item as! DataSnapshot)
                 self.paintings.append(painting)
