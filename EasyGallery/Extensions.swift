@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
+//Image Cache
 public var imageCache = NSCache<NSString, UIImage>()
 
-// Download Image Async
+// Download Image Async, extension UIImageView
 extension UIImageView {
     func downloadImageAsync(contentsOf url: String, withCompletion completion: @escaping (UIImage) -> Void) -> URLSessionDataTask? {
         if let url = URL(string: url) {
@@ -52,6 +53,7 @@ extension UIImageView {
     }
 }
 
+//String extension
 extension String {
     
     func urlEncode() -> String {

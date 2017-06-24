@@ -16,9 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //Firebase setup
         FirebaseApp.configure()
         Preferences.registerDefaults()
         Preferences.teacher = false
+        
+        //Image Cache
+        imageCache.totalCostLimit = 500 // number of images cached
+        imageCache.removeAllObjects()
         return true
     }
 
