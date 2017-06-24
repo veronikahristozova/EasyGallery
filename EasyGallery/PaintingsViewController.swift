@@ -11,19 +11,20 @@ import FirebaseDatabase
 
 class PaintingsViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var paintingsCollectionView: UICollectionView!
     @IBOutlet weak var addPaintingButton: UIBarButtonItem!
     
+    //MARK: - Variables
     let ref = Database.database().reference(withPath: "paintings")
     var paintings = [Painting]()
     
-
+    //MARK: - Lifecycle Control
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Preferences.teacher {
-            addPaintingButton.title = "+"
-        } else {
-            addPaintingButton.title = ""
+        if !Preferences.teacher {
+            addPaintingButton.isEnabled = false
+            addPaintingButton.tintColor = .clear
         }
         ref.observe(.value, with: { snapshot in
             self.paintings.removeAll()

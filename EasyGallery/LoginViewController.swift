@@ -12,13 +12,15 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextFields: UITextField!
     
+    //MARK: - IBActions
     @IBAction func didTapLoginButton(_ sender: UIButton) {
         if self.emailTextField.text == "" || self.passwordTextFields.text == "" {
             
-            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields
             
             let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
             
@@ -37,7 +39,6 @@ class LoginViewController: UIViewController {
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
-                    //TODO: Preferences 
                     Preferences.teacher = true
                     self.performSegue(withIdentifier: "login", sender: nil)
                     
@@ -59,8 +60,16 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "login", sender: nil)
     }
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        emailTextField.delegate = self
+        passwordTextFields.delegate = self
+    }
+}
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }

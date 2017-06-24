@@ -12,9 +12,11 @@ import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //MARK: - IBActions
     @IBAction func didTapCreateAccountButton(_ sender: UIButton) {
         if emailTextField.text == "" || passwordTextField.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
@@ -42,12 +44,21 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func didTapCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+}
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class PaintingCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var paintingImageView: UIImageView!
     @IBOutlet weak var paintingNameLabel: UILabel!
     @IBOutlet weak var paintingAuthorLabel: UILabel!

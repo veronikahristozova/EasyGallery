@@ -24,13 +24,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-fM-IPu">
-                                <rect key="frame" x="115" y="145" width="146" height="101.5"/>
+                                <rect key="frame" x="115" y="101" width="146" height="101.5"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XMJ-33-PiD">
-                                <rect key="frame" x="94.5" y="306.5" width="187.5" height="80"/>
+                                <rect key="frame" x="94.5" y="262.5" width="187.5" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDH-Ob-fQZ">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
@@ -47,7 +47,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sf-2h-ENe">
-                                <rect key="frame" x="165" y="438" width="45" height="34"/>
+                                <rect key="frame" x="165" y="394" width="45" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-if-F8n">
-                                <rect key="frame" x="142.5" y="386" width="90" height="25"/>
+                                <rect key="frame" x="142.5" y="342" width="90" height="25"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Forgot Password?">
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy9-ut-Sss">
-                                <rect key="frame" x="159" y="480" width="57" height="30"/>
+                                <rect key="frame" x="159" y="436" width="57" height="30"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-Yk-rm0">
-                                <rect key="frame" x="131.5" y="518" width="112" height="28"/>
+                                <rect key="frame" x="131.5" y="474" width="112" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Login as a student">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,13 +134,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgotten Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdj-t3-ntW">
-                                <rect key="frame" x="91.5" y="28" width="192.5" height="57.5"/>
+                                <rect key="frame" x="91.5" y="120" width="192.5" height="57.5"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cq-wi-xOY">
-                                <rect key="frame" x="115" y="190" width="145" height="30"/>
+                                <rect key="frame" x="115" y="257.5" width="145" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="qkd-4c-COc"/>
                                 </constraints>
@@ -149,7 +149,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXo-1k-RrM">
-                                <rect key="frame" x="126.5" y="250" width="122" height="33"/>
+                                <rect key="frame" x="126.5" y="317.5" width="122" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,9 +172,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Mdj-t3-ntW" firstAttribute="top" secondItem="XH0-Mf-VTb" secondAttribute="bottom" constant="8" id="5MP-YG-WBS"/>
+                            <constraint firstItem="Mdj-t3-ntW" firstAttribute="top" secondItem="XH0-Mf-VTb" secondAttribute="bottom" constant="100" id="5MP-YG-WBS"/>
                             <constraint firstItem="wXo-1k-RrM" firstAttribute="centerX" secondItem="Aok-n4-Xgn" secondAttribute="centerX" id="7VD-Hi-n2c"/>
-                            <constraint firstItem="5cq-wi-xOY" firstAttribute="top" secondItem="Mdj-t3-ntW" secondAttribute="bottom" constant="104.5" id="C9h-TE-joz"/>
+                            <constraint firstItem="5cq-wi-xOY" firstAttribute="top" secondItem="Mdj-t3-ntW" secondAttribute="bottom" constant="80" id="C9h-TE-joz"/>
                             <constraint firstItem="wXo-1k-RrM" firstAttribute="top" secondItem="5cq-wi-xOY" secondAttribute="bottom" constant="30" id="Hyd-72-bi3"/>
                             <constraint firstItem="uk0-qG-pkA" firstAttribute="top" secondItem="XH0-Mf-VTb" secondAttribute="bottom" id="Rcr-WA-Ye1"/>
                             <constraint firstItem="5cq-wi-xOY" firstAttribute="centerX" secondItem="Aok-n4-Xgn" secondAttribute="centerX" id="VhK-Zt-cvT"/>
@@ -202,9 +202,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSU-uF-YTt">
-                                <rect key="frame" x="111" y="50" width="152" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSU-uF-YTt">
+                                <rect key="frame" x="130" y="120" width="114.5" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="24"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -247,6 +246,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kSU-uF-YTt" firstAttribute="top" secondItem="7yq-bb-fbA" secondAttribute="bottom" constant="100" id="PK0-pA-XZM"/>
+                            <constraint firstItem="kSU-uF-YTt" firstAttribute="centerX" secondItem="zaF-ve-XIa" secondAttribute="centerX" id="Zt5-SP-2G5"/>
                             <constraint firstItem="wHM-vH-qob" firstAttribute="top" secondItem="7yq-bb-fbA" secondAttribute="bottom" id="dKS-QX-iGj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wHM-vH-qob" secondAttribute="leading" id="ehI-Yc-wqq"/>
                         </constraints>
@@ -366,7 +367,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ATh-Zw-E2U">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="ftj-zC-dKk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ftj-zC-dKk">
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="MKK-qm-Fxy" kind="show" identifier="addPainting" id="lwb-mm-PeW"/>

@@ -12,8 +12,10 @@ import FirebaseAuth
 
 class ForgottenPasswordViewController: UIViewController {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
 
+    //MARK: - IBActions
     @IBAction func didTapResetButton(_ sender: UIButton) {
         if self.emailTextField.text == "" {
             let alertController = UIAlertController(title: "Oops!", message: "Please enter an email.", preferredStyle: .alert)
@@ -47,9 +49,12 @@ class ForgottenPasswordViewController: UIViewController {
             })
         }
     }
+    
     @IBAction func didTapCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
