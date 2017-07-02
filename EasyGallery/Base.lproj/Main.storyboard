@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="EasyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="EasyGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -367,6 +367,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ATh-Zw-E2U">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kxG-UD-YOc">
+                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="didTapLogoutButton:" destination="MWL-YP-McN" id="k2X-4V-3qj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ftj-zC-dKk">
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -377,11 +383,44 @@
                     <connections>
                         <outlet property="addPaintingButton" destination="ftj-zC-dKk" id="ElD-lK-p3I"/>
                         <outlet property="paintingsCollectionView" destination="lnM-EU-MAC" id="pBd-lM-7Kl"/>
+                        <segue destination="5tl-NQ-WFV" kind="show" identifier="showSinglePainting" id="Tag-6e-hwG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njE-IZ-XcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735.1999999999998" y="129.98500749625188"/>
+            <point key="canvasLocation" x="2706" y="130"/>
+        </scene>
+        <!--Single Painting View Controller-->
+        <scene sceneID="hH8-Si-VoA">
+            <objects>
+                <viewController id="5tl-NQ-WFV" customClass="SinglePaintingViewController" customModule="EasyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aow-Lw-ZED"/>
+                        <viewControllerLayoutGuide type="bottom" id="1fh-a0-Uyk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iv9-nv-GtP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-Vk-9bT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SuG-Vk-9bT" firstAttribute="top" secondItem="aow-Lw-ZED" secondAttribute="bottom" id="20u-oJ-hJb"/>
+                            <constraint firstItem="SuG-Vk-9bT" firstAttribute="leading" secondItem="Iv9-nv-GtP" secondAttribute="leading" id="7he-gm-eCB"/>
+                            <constraint firstAttribute="trailing" secondItem="SuG-Vk-9bT" secondAttribute="trailing" id="RXc-IH-q86"/>
+                            <constraint firstItem="1fh-a0-Uyk" firstAttribute="top" secondItem="SuG-Vk-9bT" secondAttribute="bottom" id="aU8-fp-0xV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paintingImageView" destination="SuG-Vk-9bT" id="kl5-Xp-YRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjA-lK-KTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2735" y="831"/>
         </scene>
         <!--Add Painting View Controller-->
         <scene sceneID="rjD-uH-Wru">

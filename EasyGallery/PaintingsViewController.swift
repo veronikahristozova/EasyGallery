@@ -19,6 +19,20 @@ class PaintingsViewController: UIViewController {
     let ref = Database.database().reference(withPath: "paintings")
     var paintings = [Painting]()
     
+    // MARK: - IBActions
+    @IBAction func didTapLogoutButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSinglePainting" {
+            guard let selectedPainting = sender as? Painting else { return }
+            let singlePaintingVC = segue.destination as! SinglePaintingViewController
+            singlePaintingVC.painting = selectedPainting
+        }
+    }
+    
     //MARK: - Lifecycle Control
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +60,9 @@ extension PaintingsViewController: UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PaintingCollectionViewCell
         cell.painting = paintings[indexPath.row]
         return cell
+    }
+    //NEW:
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showSinglePainting", sender: paintings[indexPath.row])
     }
 }

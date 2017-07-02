@@ -14,6 +14,7 @@
 		9691C6981EE69594008792E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C6971EE69594008792E1 /* Preferences.swift */; };
 		9691C69B1EE69B51008792E1 /* PaintingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */; };
 		9691C69D1EE69F68008792E1 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691C69C1EE69F68008792E1 /* Painting.swift */; };
+		96AC44E81EFE60D800D1F1EA /* SinglePaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AC44E71EFE60D800D1F1EA /* SinglePaintingViewController.swift */; };
 		96EF153A1ED8480500FCE739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF15391ED8480500FCE739 /* AppDelegate.swift */; };
 		96EF153C1ED8480500FCE739 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF153B1ED8480500FCE739 /* LoginViewController.swift */; };
 		96EF153F1ED8480500FCE739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EF153D1ED8480500FCE739 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		9691C6971EE69594008792E1 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintingsViewController.swift; sourceTree = "<group>"; };
 		9691C69C1EE69F68008792E1 /* Painting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		96AC44E71EFE60D800D1F1EA /* SinglePaintingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePaintingViewController.swift; sourceTree = "<group>"; };
 		96EF15361ED8480500FCE739 /* EasyGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EF15391ED8480500FCE739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EF153B1ED8480500FCE739 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -123,11 +125,9 @@
 		9691C6961EE694E6008792E1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				96EF153B1ED8480500FCE739 /* LoginViewController.swift */,
-				96EF156A1ED98E5E00FCE739 /* RegisterViewController.swift */,
-				96EF156C1ED9909D00FCE739 /* ForgottenPasswordViewController.swift */,
+				96AC44E91EFE612900D1F1EA /* Login VCs */,
 				9691C69A1EE69B51008792E1 /* PaintingsViewController.swift */,
-				9618F2BD1EE7285400385B83 /* PaintingCollectionViewCell.swift */,
+				96AC44E71EFE60D800D1F1EA /* SinglePaintingViewController.swift */,
 				9618F2C11EE7E7D000385B83 /* AddPaintingViewController.swift */,
 			);
 			name = "View Controllers";
@@ -148,6 +148,24 @@
 				9691C69C1EE69F68008792E1 /* Painting.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		96AC44E91EFE612900D1F1EA /* Login VCs */ = {
+			isa = PBXGroup;
+			children = (
+				96EF153B1ED8480500FCE739 /* LoginViewController.swift */,
+				96EF156A1ED98E5E00FCE739 /* RegisterViewController.swift */,
+				96EF156C1ED9909D00FCE739 /* ForgottenPasswordViewController.swift */,
+			);
+			name = "Login VCs";
+			sourceTree = "<group>";
+		};
+		96AC44EA1EFE61E000D1F1EA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9618F2BD1EE7285400385B83 /* PaintingCollectionViewCell.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		96EF152D1ED8480500FCE739 = {
@@ -177,6 +195,7 @@
 			children = (
 				96EF15391ED8480500FCE739 /* AppDelegate.swift */,
 				9691C6961EE694E6008792E1 /* View Controllers */,
+				96AC44EA1EFE61E000D1F1EA /* UI */,
 				9691C69E1EE69F72008792E1 /* Models */,
 				9691C6991EE695E2008792E1 /* Utilities */,
 				96EF15671ED8483A00FCE739 /* Supporting Files */,
@@ -518,6 +537,7 @@
 				9691C6981EE69594008792E1 /* Preferences.swift in Sources */,
 				96EF156D1ED9909D00FCE739 /* ForgottenPasswordViewController.swift in Sources */,
 				9618F2C21EE7E7D000385B83 /* AddPaintingViewController.swift in Sources */,
+				96AC44E81EFE60D800D1F1EA /* SinglePaintingViewController.swift in Sources */,
 				96EF153A1ED8480500FCE739 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
