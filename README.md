@@ -9,4 +9,8 @@ Main Flow:
 
 Orher Features:
 Register supported
-Forgotten password supporteds
+Forgotten password supported
+
+Example teacher credentials:
+E-mail: admin@admin.com
+Password: 123456q

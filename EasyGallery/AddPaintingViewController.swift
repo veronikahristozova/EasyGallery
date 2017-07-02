@@ -22,8 +22,13 @@ class AddPaintingViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func didTapAddButton(_ sender: UIButton) {
+        guard let name = nameTextField.text,
+              let pictureURL = pictureURLTextField.text,
+              let author = authorTextField.text,
+              let yearInt = yearTextField.text,
+              let year = Int(yearInt) else { return }
         
-        let painting = Painting(name: nameTextField.text!, pictureURL: pictureURLTextField.text!, author: authorTextField.text!, year: Int(yearTextField.text!)!)
+        let painting = Painting(name: name, pictureURL: pictureURL, author: author, year: year)
         let paintingRef = ref.child((nameTextField.text?.lowercased())!)
         paintingRef.setValue(painting.toAnyObject())
         navigationController?.popViewController(animated: true)
