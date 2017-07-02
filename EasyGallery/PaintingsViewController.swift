@@ -21,7 +21,7 @@ class PaintingsViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func didTapLogoutButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Segues
